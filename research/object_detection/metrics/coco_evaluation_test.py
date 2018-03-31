@@ -296,7 +296,7 @@ class CocoEvaluationPyFuncTest(tf.test.TestCase):
                    detection_classes: np.array([2])
                })
     metrics = {}
-    for key, (value_op, _) in eval_metric_ops.iteritems():
+    for key, (value_op, _) in eval_metric_ops.items():
       metrics[key] = value_op
     metrics = sess.run(metrics)
     self.assertAlmostEqual(metrics['DetectionBoxes_Precision/mAP'], 1.0)
